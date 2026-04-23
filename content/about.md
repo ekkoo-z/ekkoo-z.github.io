@@ -19,12 +19,14 @@ summary: about
 ## Contact
 
 - GitHub: [ekkoo-z](https://github.com/ekkoo-z)
-- WeChat Official Account: **Ekkoo's Offense-Defense Teahouse** (艾克的攻防茶馆)
+- 微信公众号 / WeChat Official Account: **艾克的攻防茶馆** (Ekkoo's Offense-Defense Teahouse)
 - Email: ekek20211268@gmail.com
 
-## Disclaimer
+## 说明 / Disclaimer
 
-Currently employed by an internal (blue-team) security organization. Not participating in any external attack-defense exercises — please, no attribution attempts :)
+目前就职于某甲方安全团队，不参加任何攻防活动，请勿溯源～
+
+_Currently employed by an internal (blue-team) security organization. Not participating in any external attack-defense exercises — please, no attribution attempts :)_
 
 ---
 
