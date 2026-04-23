@@ -113,6 +113,17 @@ h1, h2, h3, h4, h5, h6,
   padding-top: 12px;
 }
 
+.footer__copyright {
+  white-space: nowrap;
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  opacity: 0.75;
+}
+.footer__copyright p {
+  display: inline;
+  margin: 0;
+}
+
 /* ========= 顶部导航菜单 ========= */
 .navbar__list-item a {
   font-family: var(--mono) !important;

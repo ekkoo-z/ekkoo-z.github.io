@@ -8,10 +8,10 @@
 {{- end -}}
 <footer class="footer footer__{{ .footerClassModifier }}">
   <ul class="footer__list {{ with .context.Site.Params.doNotLoadAnimations }}.{{ else }}animated fadeInDown{{ end }}">
-    <li class="footer__item">
+    <li class="footer__item footer__copyright">
       &copy;
       {{ if isset .context.Site.Params "copyright" }}
-        {{ replace .context.Site.Params.copyright "{{ YEAR }}" (now.Format "2006") | markdownify }}
+        {{ replace .context.Site.Params.copyright "{{ YEAR }}" (now.Format "2006") | safeHTML }}
       {{ else }}
         {{ $authorName }} · {{ now.Format "2006" }}
       {{ end }}

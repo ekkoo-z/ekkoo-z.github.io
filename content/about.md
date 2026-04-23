@@ -14,8 +14,8 @@ summary: about
 
 ## Side Gig
 
-- **Bug Bounty Hunter / SRC 漏洞猎人** — active on [腾讯安全众测 (TSRC)](https://zc.tencent.com/personnal/whiteHotPersonnal?username=LoveJinx) · [eduSRC (SJTU)](https://src.sjtu.edu.cn/profile/15013/)
 - **Esports Player** — 2023 National Collegiate League of Legends Grand Finals · **2nd Place / Runner-up** (Jungler 🦁)
+- **Bug Bounty Hunter / SRC 漏洞猎人** — active on [腾讯安全众测 (TSRC)](https://zc.tencent.com/personnal/whiteHotPersonnal?username=LoveJinx) · [eduSRC (SJTU)](https://src.sjtu.edu.cn/profile/15013/)
 
 ## Contact
 
@@ -25,9 +25,7 @@ summary: about
 
 ## Disclaimer
 
-目前就职于某甲方安全团队，不参加任何攻防活动，请勿溯源～
-
-_Currently employed by an internal (blue-team) security organization. Not participating in any external attack-defense exercises — please, no attribution attempts :)_
+Currently employed by an internal (blue-team) security organization. Not participating in any external attack-defense exercises — please, no attribution attempts :)
 
 ---
 
