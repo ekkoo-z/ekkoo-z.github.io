@@ -306,28 +306,78 @@ pre:hover .code-copy-btn {
   border-color: rgba(80, 250, 123, 0.4);
 }
 
-/* ========= 右侧浮动目录 TOC ========= */
-.floating-toc {
+/* ========= 右侧浮动目录 TOC（边缘触发式） ========= */
+
+/* 触发区 + 容器（无视觉，接收 hover） */
+.toc-wrapper {
   position: fixed;
-  right: 24px;
+  right: 0;
   top: 80px;
+  bottom: 80px;
+  width: 32px;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+/* 默认可见的纤细进度条 */
+.toc-rail {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(128, 128, 128, 0.18);
+  border-radius: 2px;
+  transition: opacity 0.2s ease;
+}
+.toc-rail__progress {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 0;
+  background: #50fa7b;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(80, 250, 123, 0.6);
+  transition: height 0.12s linear;
+}
+
+/* 完整 TOC：默认隐藏并右移，hover 触发区时滑入 */
+.floating-toc {
+  position: absolute;
+  right: 20px;
+  top: 0;
   width: 260px;
-  max-height: calc(100vh - 160px);
+  max-height: 100%;
   padding: 14px 16px;
   font-family: var(--mono);
   font-size: 0.98rem;
-  background: rgba(128, 128, 128, 0.06);
-  border: 1px solid rgba(128, 128, 128, 0.15);
+  background: rgba(30, 30, 35, 0.9);
+  border: 1px solid rgba(128, 128, 128, 0.2);
   border-radius: 8px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   overflow-y: auto;
-  z-index: 50;
-  opacity: 0.9;
-  transition: opacity 0.2s ease;
+  opacity: 0;
+  transform: translateX(30px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
-.floating-toc:hover {
+
+[data-theme="light"] .floating-toc,
+html.theme--light .floating-toc {
+  background: rgba(250, 250, 252, 0.95);
+}
+
+/* hover 整个触发条或 TOC 本身 */
+.toc-wrapper:hover .floating-toc {
   opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+.toc-wrapper:hover .toc-rail {
+  opacity: 0.3;
 }
 
 .floating-toc__header {
@@ -396,8 +446,8 @@ pre:hover .code-copy-btn {
 }
 
 /* 窄屏隐藏 */
-@media (max-width: 1400px) {
-  .floating-toc {
+@media (max-width: 1100px) {
+  .toc-wrapper {
     display: none;
   }
 }

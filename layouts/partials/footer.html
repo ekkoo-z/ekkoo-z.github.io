@@ -41,6 +41,24 @@
   {{ end }}
 
   <script>
+    /* TOC 进度条跟随滚动 */
+    document.addEventListener('DOMContentLoaded', function () {
+      var progress = document.getElementById('tocProgress');
+      if (!progress) return;
+      function updateProgress() {
+        var h = document.documentElement;
+        var scrollTop = h.scrollTop || document.body.scrollTop;
+        var scrollHeight = h.scrollHeight - h.clientHeight;
+        var pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        progress.style.height = pct + '%';
+      }
+      updateProgress();
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      window.addEventListener('resize', updateProgress, { passive: true });
+    });
+  </script>
+
+  <script>
     /* TOC scroll-spy: 滚动时高亮当前章节 */
     document.addEventListener('DOMContentLoaded', function () {
       var toc = document.getElementById('floatingToc');

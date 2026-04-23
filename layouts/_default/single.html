@@ -59,16 +59,21 @@
     </div>
   </div>
 
-  {{/* Floating sticky TOC on the right side */}}
+  {{/* Edge-triggered floating TOC */}}
   {{ if .TableOfContents }}
-    <aside class="floating-toc" id="floatingToc">
-      <div class="floating-toc__header">
-        <i class="fas fa-list-ul"></i>
-        <span>On this page</span>
+    <div class="toc-wrapper" id="tocWrapper">
+      <div class="toc-rail">
+        <div class="toc-rail__progress" id="tocProgress"></div>
       </div>
-      <nav class="floating-toc__nav">
-        {{ .TableOfContents }}
-      </nav>
-    </aside>
+      <aside class="floating-toc" id="floatingToc">
+        <div class="floating-toc__header">
+          <i class="fas fa-list-ul"></i>
+          <span>On this page</span>
+        </div>
+        <nav class="floating-toc__nav">
+          {{ .TableOfContents }}
+        </nav>
+      </aside>
+    </div>
   {{ end }}
 {{ end }}
