@@ -1,10 +1,12 @@
 ---
-title: "About Me"
+title: "whoami?"
 url: "/about/"
 summary: about
 ---
 
-**ekkoo** · Security Researcher
+**ekkoo** · A Security Researcher
+
+> Why the double `o`? Blame [Ekko](https://www.leagueoflegends.com/en-us/champions/ekko/) — the League champion who rewinds time and keeps repeating himself. So does his name. 🌀
 
 ## Focus
 
