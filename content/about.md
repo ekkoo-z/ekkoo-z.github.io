@@ -6,7 +6,7 @@ summary: about
 
 **ekkoo** · A Security Researcher
 
-> Why the double `o`? Blame [Ekko](https://www.leagueoflegends.com/en-us/champions/ekko/) — the League champion who rewinds time and keeps repeating himself. So does his name. 🌀
+> Why the double `o`? Every time I tried to register `ekko`, some faster [Ekko](https://www.leagueoflegends.com/en-us/champions/ekko/) fan had already rewound time and grabbed it first. So I tacked on one more `o` — and here we are. 🌀
 
 ## Focus
 
