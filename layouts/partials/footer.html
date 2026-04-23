@@ -40,44 +40,6 @@
     </script>
   {{ end }}
 
-  <script>
-    /* TOC 滚动唤起：滚动时显示，停 2.5s 自动隐藏；鼠标在 TOC 上保持可见 */
-    document.addEventListener('DOMContentLoaded', function () {
-      var toc = document.getElementById('floatingToc');
-      if (!toc) return;
-
-      var hideTimer = null;
-      var isHovering = false;
-      var HIDE_DELAY = 2500;
-
-      function showToc() {
-        toc.classList.add('is-visible');
-        scheduleHide();
-      }
-      function hideToc() {
-        if (!isHovering) toc.classList.remove('is-visible');
-      }
-      function scheduleHide() {
-        clearTimeout(hideTimer);
-        hideTimer = setTimeout(hideToc, HIDE_DELAY);
-      }
-
-      /* 首次进入页面时展示一下，让用户知道存在 */
-      setTimeout(showToc, 400);
-
-      window.addEventListener('scroll', showToc, { passive: true });
-
-      toc.addEventListener('mouseenter', function () {
-        isHovering = true;
-        clearTimeout(hideTimer);
-        toc.classList.add('is-visible');
-      });
-      toc.addEventListener('mouseleave', function () {
-        isHovering = false;
-        scheduleHide();
-      });
-    });
-  </script>
 
   <script>
     /* TOC scroll-spy: 滚动时高亮当前章节 */
