@@ -8,3 +8,6 @@ Thumbs.db
 
 # 本地构建/临时文件
 _init_tmp/
+
+# 本地 Claude Code 设置
+.claude/
