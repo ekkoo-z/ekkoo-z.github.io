@@ -306,15 +306,10 @@ pre:hover .code-copy-btn {
   border-color: rgba(80, 250, 123, 0.4);
 }
 
-/* ========= 宽屏：正文留右边距 + 限制阅读宽度，物理上和 TOC 分列 ========= */
+/* ========= 宽屏：仅为 TOC 预留右侧空间，正文不限宽 ========= */
 @media (min-width: 1200px) {
   body.body:has(.floating-toc) .wrapper__main {
     padding-right: 220px;
-  }
-  body.body:has(.floating-toc) .post {
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
