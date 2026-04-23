@@ -8,20 +8,23 @@ summary: about
 
 ## Focus
 
-- **AI for Security** — applying AI to offensive & defensive security
-- **Cloud-Native Security** — K8s / containers / service mesh
-- **Offensive Tooling** — red team weaponization
+- **AI for Security** — leveraging AI for offensive & defensive security, and researching the security flaws of AI systems themselves
+- **Cloud-Native Security** — K8s / container security, and cloud-vendor vulnerability research
+- **Offensive Tooling** — red-team weaponization & tooling development
 
-## 经历
+## Side Gig
 
-- 业余电竞选手 — LOL 全国高校联赛总决赛 **亚军**（打野 🦁）
-- 目前就职于某甲方安全团队，不参加任何攻防活动，请勿溯源～
+- **Esports Player** — 2023 National Collegiate League of Legends Championship · **Runner-up** (Jungler 🦁)
 
-## 联系方式
+## Contact
 
 - GitHub: [ekkoo-z](https://github.com/ekkoo-z)
-- 微信公众号：**艾克的攻防茶馆**
+- WeChat Official Account: **Ekkoo's Offense-Defense Teahouse** (艾克的攻防茶馆)
 - Email: ekek20211268@gmail.com
+
+## Disclaimer
+
+Currently employed by an internal (blue-team) security organization. Not participating in any external attack-defense exercises — please, no attribution attempts :)
 
 ---
 
