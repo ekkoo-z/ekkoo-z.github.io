@@ -1,0 +1,10 @@
+public/
+resources/_gen/
+.hugo_build.lock
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# 本地构建/临时文件
+_init_tmp/

@@ -1,0 +1,74 @@
+{{ define "main" }}
+  <div class="post {{ with .Site.Params.doNotLoadAnimations }}.{{ else }}animated fadeInDown{{ end }}">
+    {{ if .Params.thumbnail }}
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="{{ .Params.thumbnail | relURL }}" alt="Thumbnail image" />
+      </div>
+    {{ end }}
+    <div class="post__content">
+      {{ if (eq .Site.Params.disableTitleCapitalization true) }}
+        <h1>{{ .Title }}</h1>
+      {{ else }}
+        <h1>{{ title .Title }}</h1>
+      {{ end }}
+
+      {{ if or (eq .Type "post") (eq .Type .Site.Params.postSectionName) }}
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text">{{ .Date.Format "2006-01-02" }}</span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">{{ i18n "reading_time" .ReadingTime }}</span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-file-word post__meta-icon"></em>
+            <span class="post__meta-text">{{ .WordCount }} 字</span>
+          </li>
+        </ul>
+      {{ end }}
+
+      {{- partial "expirationnote.html" . -}}
+
+      {{ .Content }}
+
+      {{- if isset .Params "series" -}}
+        {{- partial "series.html" . -}}
+      {{- end -}}
+
+      {{- if (eq .Site.Params.relatedPosts true) -}}
+        {{- partial "related.html" . -}}
+      {{- end -}}
+
+      {{- if (eq .Params.contact true) -}}
+        {{- partial "contact.html" . -}}
+      {{- end -}}
+
+      {{- if (eq .Site.Params.mermaid.enable true) -}}
+        {{- partial "mermaid.html" . -}}
+      {{- end -}}
+    </div>
+    <div class="post__footer">
+      {{ with .Page.Params.Categories }}
+        {{ partial "taxonomy/categories.html" . }}
+      {{ end }}
+      {{ with .Page.Params.Tags }}
+        {{ partial "taxonomy/tags.html" . }}
+      {{ end }}
+    </div>
+  </div>
+
+  {{/* Floating sticky TOC on the right side */}}
+  {{ if .TableOfContents }}
+    <aside class="floating-toc" id="floatingToc">
+      <div class="floating-toc__header">
+        <i class="fas fa-list-ul"></i>
+        <span>On this page</span>
+      </div>
+      <nav class="floating-toc__nav">
+        {{ .TableOfContents }}
+      </nav>
+    </aside>
+  {{ end }}
+{{ end }}

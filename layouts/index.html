@@ -1,0 +1,40 @@
+{{ define "main" }}
+  <div class="post {{ with .Site.Params.doNotLoadAnimations }}.{{ else }}animated fadeInDown{{ end }}">
+    <div class="post__content">
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{ $posts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  {{ $postsByYear := $posts.GroupByDate "2006" }}
+
+  <div class="post {{ with .Site.Params.doNotLoadAnimations }}.{{ else }}animated fadeInDown{{ end }}">
+    <div class="post__content">
+      {{ range $postsByYear }}
+        <h2 class="archive-year">{{ .Key }}</h2>
+        <ul class="archive-list">
+          {{ range .Pages }}
+            <li class="archive-item">
+              <div class="archive-item__header">
+                <span class="archive-item__date">{{ .Date.Format "Jan 02" }}</span>
+                <span class="archive-item__title">
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </span>
+                <span class="archive-item__meta">
+                  {{ .WordCount }} 字 · {{ math.Ceil (div (float .WordCount) 300.0) }} 分钟
+                </span>
+              </div>
+              {{ $summary := .Params.description }}
+              {{ if not $summary }}
+                {{ $summary = .Summary | plainify | truncate 120 }}
+              {{ end }}
+              {{ with $summary }}
+                <p class="archive-item__summary">{{ . }}</p>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

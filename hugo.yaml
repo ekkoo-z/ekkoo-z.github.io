@@ -1,0 +1,73 @@
+baseURL: "https://ekkoo-z.github.io/"
+languageCode: zh-cn
+defaultContentLanguage: zh-cn
+title: "ekkoo's blog"
+theme: anatole
+
+summarylength: 30
+enableEmoji: true
+enableRobotsTXT: true
+hasCJKLanguage: true
+
+pygmentsUseClasses: true
+pygmentsCodeFences: true
+pygmentsCodefencesGuessSyntax: true
+
+localizedDates: false
+
+taxonomies:
+  category: categories
+  tag: tags
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+
+params:
+  title: "ekkoo's blog"
+  author: ekkoo
+  description: '<ul class="intro-skills"><li>AI for Security</li><li>Cloud-Native Security</li><li>Offensive Tooling</li></ul>'
+  displayMode: dark
+  profilePicture: "https://avatars.githubusercontent.com/ekkoo-z"
+  keywords: "AI安全,云原生,红队,攻防,Security,ekkoo"
+  mainSections: ["post"]
+  doNotLoadAnimations: false
+  singleDateFormat: "2006-01-02"
+  indexDateFormat: "Jan 02"
+  listDateFormat: "2006-01-02"
+  reversepagetitle: true
+  readMore: true
+  relatedPosts: true
+  numberOfRelatedPosts: 3
+  disableTitleCapitalization: true
+  contentratio: 0.78
+  customCss:
+    - "css/custom.css"
+  enableBusuanzi: true
+
+  socialIcons:
+    - icon: "fa-brands fa-github"
+      title: "GitHub"
+      url: "https://github.com/ekkoo-z"
+    - icon: "fa-solid fa-envelope"
+      title: "Email"
+      url: "mailto:ekek20211268@gmail.com"
+    - icon: "fa-solid fa-rss"
+      title: "RSS"
+      url: "/index.xml"
+
+menu:
+  main:
+    - name: "Home"
+      weight: 100
+      identifier: "home"
+      url: "/"
+    - name: "About"
+      weight: 200
+      identifier: "about"
+      url: "/about/"
