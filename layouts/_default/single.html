@@ -59,21 +59,16 @@
     </div>
   </div>
 
-  {{/* Edge-triggered floating TOC */}}
+  {{/* Scroll-reveal TOC */}}
   {{ if .TableOfContents }}
-    <div class="toc-wrapper" id="tocWrapper">
-      <div class="toc-rail">
-        <div class="toc-rail__progress" id="tocProgress"></div>
+    <aside class="floating-toc" id="floatingToc">
+      <div class="floating-toc__header">
+        <i class="fas fa-list-ul"></i>
+        <span>On this page</span>
       </div>
-      <aside class="floating-toc" id="floatingToc">
-        <div class="floating-toc__header">
-          <i class="fas fa-list-ul"></i>
-          <span>On this page</span>
-        </div>
-        <nav class="floating-toc__nav">
-          {{ .TableOfContents }}
-        </nav>
-      </aside>
-    </div>
+      <nav class="floating-toc__nav">
+        {{ .TableOfContents }}
+      </nav>
+    </aside>
   {{ end }}
 {{ end }}
