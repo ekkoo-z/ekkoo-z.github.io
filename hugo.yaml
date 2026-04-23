@@ -31,7 +31,7 @@ markup:
 params:
   title: "ekkoo's Offense-Defense Teahouse"
   author: ekkoo
-  copyright: "&lt;/&gt; Offensive Notes · {{ YEAR }}"
+  copyright: "&lt;/&gt; Growth Notes · {{ YEAR }}"
   description: '<ul class="intro-skills"><li>AI for Security</li><li>Cloud-Native Security</li><li>Offensive Tooling</li></ul>'
   displayMode: dark
   profilePicture: "https://avatars.githubusercontent.com/ekkoo-z"

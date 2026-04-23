@@ -25,6 +25,6 @@ summary: about
 
 ## Disclaimer
 
-Currently employed by an internal (blue-team) security organization. Not participating in any external attack-defense exercises — please, no attribution attempts :)
+Blue team at a financial firm. Not participating in any external attack-defense exercises — please, no attribution attempts :)
 
 _The world of hackers is fascinating, isn't it?_
