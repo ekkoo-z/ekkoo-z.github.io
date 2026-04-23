@@ -1,7 +1,7 @@
 baseURL: "https://ekkoo-z.github.io/"
 languageCode: zh-cn
 defaultContentLanguage: zh-cn
-title: "Ekkoo's Offense-Defense Teahouse"
+title: "ekkoo's Offense-Defense Teahouse"
 theme: anatole
 
 summarylength: 30
@@ -29,7 +29,7 @@ markup:
     ordered: false
 
 params:
-  title: "Ekkoo's Offense-Defense Teahouse"
+  title: "ekkoo's Offense-Defense Teahouse"
   author: ekkoo
   copyright: "&lt;/&gt; Offensive Notes · {{ YEAR }}"
   description: '<ul class="intro-skills"><li>AI for Security</li><li>Cloud-Native Security</li><li>Offensive Tooling</li></ul>'

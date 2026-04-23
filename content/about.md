@@ -20,7 +20,7 @@ summary: about
 ## Contact
 
 - GitHub: [ekkoo-z](https://github.com/ekkoo-z)
-- WeChat Official Account: **艾克的攻防茶馆** (Ekkoo's Offense-Defense Teahouse)
+- 微信公众号：**艾克的攻防茶馆**
 - Email: ekek20211268@gmail.com
 
 ## Disclaimer
