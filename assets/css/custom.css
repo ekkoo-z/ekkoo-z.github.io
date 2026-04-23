@@ -306,9 +306,9 @@ pre:hover .code-copy-btn {
   border-color: rgba(80, 250, 123, 0.4);
 }
 
-/* ========= 宽屏：仅为 TOC 预留右侧空间，正文不限宽 ========= */
+/* ========= 宽屏：仅文章正文为 TOC 预留右侧空间，不影响导航栏 ========= */
 @media (min-width: 1200px) {
-  body.body:has(.floating-toc) .wrapper__main {
+  body.body:has(.floating-toc) .post {
     padding-right: 220px;
   }
 }
