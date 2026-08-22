@@ -10,8 +10,6 @@ tags:
   - Agent
   - Heimdall
   - CTF
-  - 渗透测试
-  - 百度
 ---
 
 ## 前言

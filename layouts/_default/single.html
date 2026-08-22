@@ -60,7 +60,7 @@
   </div>
 
   {{/* Scroll-reveal TOC */}}
-  {{ if .TableOfContents }}
+  {{ if and .TableOfContents (in .TableOfContents "<li") }}
     <aside class="floating-toc" id="floatingToc">
       <div class="floating-toc__header">
         <i class="fas fa-list-ul"></i>
