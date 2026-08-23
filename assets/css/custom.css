@@ -246,13 +246,6 @@ h1, h2, h3, h4, h5, h6,
   border-radius: 6px;
   border: 1px solid rgba(128, 128, 128, 0.15);
 }
-.post__content figcaption {
-  margin-top: 0.55em;
-  font-size: 0.88rem !important;
-  line-height: 1.5 !important;
-  opacity: 0.62;
-  font-family: var(--mono);
-}
 
 .post__meta {
   font-family: var(--mono);

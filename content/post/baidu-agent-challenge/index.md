@@ -24,14 +24,12 @@ tags:
 
 <figure>
   <img src="https://img.wemd.app/1787405896001_5y72b3.png" alt="线上赛总分排名，第二名与第一名仅差 0.06 分">
-  <figcaption>线上赛总分：第 2 / 150，与第一名仅差 0.06</figcaption>
 </figure>
 
 获得 flag 33 个，全场最多，完成率也是全场最高。
 
 <figure>
   <img src="https://img.wemd.app/1787405919069_fu9bj5.png" alt="flag 数量与完成率全场最高">
-  <figcaption>33 个 flag，完成率全场最高</figcaption>
 </figure>
 
 ## 比赛内容
@@ -40,14 +38,12 @@ tags:
 
 <figure>
   <img src="https://img.wemd.app/1787406273558_dupo4f.png" alt="赛题类型占比：Web 为主，其次是二进制、AI 与区块链">
-  <figcaption>题型分布：Web 占绝对多数</figcaption>
 </figure>
 
 线上赛和评委评分各 50%。
 
 <figure>
   <img src="https://img.wemd.app/1787406286122_9cpg28.png" alt="线上赛与评委评分各占 50%">
-  <figcaption>成绩构成：线上赛 50% + 评委评分 50%</figcaption>
 </figure>
 
 打比赛要盯的三件事：解题成功率、解题速度、Token 消耗。
@@ -70,12 +66,10 @@ tags:
 
 <figure>
   <img src="https://img.wemd.app/1787406915888_e426ex.png" alt="TSecBench v1 上 pi agent 与 Claude Code 的解题对比">
-  <figcaption>TSecBench v1：相同时间、相同题目下的对比</figcaption>
 </figure>
 
 <figure>
   <img src="https://img.wemd.app/1787407005126_vir8c8.png" alt="pi agent 在解题速度和 token 消耗上优于 Claude Code">
-  <figcaption>相同条件下，pi 的解题速度和 token 消耗都优于 Claude Code</figcaption>
 </figure>
 
 最终在官方比赛中也成功展现优势：消耗 token 前十最少，约为第一的 1/7。
@@ -94,7 +88,6 @@ Heimdall 的 pi agent 实现反过来做：
 
 <figure>
   <img src="https://img.wemd.app/1787407682471_6cuawn.png" alt="裸 Pi 在 TSecBench v1 Web 题上的未解情况">
-  <figcaption>裸 Pi 跑完整 TSecBench v1 Web 题，一部分没解出来</figcaption>
 </figure>
 
 查看 LLM 对话日志，能看到一些典型问题：死胡同、喜欢爆破、死路重测、幻觉循环……
@@ -116,7 +109,6 @@ Heimdall 的 pi agent 实现反过来做：
 
 <figure>
   <img src="https://img.wemd.app/1787408339232_97hbel.png" alt="Heimdall 主 Agent 与观察者 Agent 的架构图">
-  <figcaption>主 Agent 负责攻击，观察者旁路读思路、画图、不下手</figcaption>
 </figure>
 
 实现过程中也踩了坑，最后都做了改善：
@@ -129,19 +121,16 @@ Heimdall 的 pi agent 实现反过来做：
 
 <figure>
   <img src="https://img.wemd.app/1787409054591_4ffxcr.png" alt="观察者 Agent 产出的 heimdall-map">
-  <figcaption>观察者产出的 &lt;heimdall-map&gt;：LOCK / DEAD / ANGLES / TENSION</figcaption>
 </figure>
 
 靶场测试：A-03、A-18 是腾讯云 Bench 上多数 Agent 难以按时解出的题。同一套主 Agent，只开关观察器对比：
 
 <figure>
   <img src="https://img.wemd.app/1787409598212_7oupzq.png" alt="开关观察器后 A-03 / A-18 的解题对比（一）">
-  <figcaption>同一套主 Agent，只开关观察器</figcaption>
 </figure>
 
 <figure>
   <img src="https://img.wemd.app/1787409627678_uhj0xm.png" alt="开关观察器后 A-03 / A-18 的解题对比（二）">
-  <figcaption>A-03、A-18：多数 Agent 难以按时解出的题</figcaption>
 </figure>
 
 ### Prompt、Context 与 Loop 工程：提升解题注意力
@@ -173,21 +162,18 @@ XdriveC2：BOF 执行 / 后渗透
 
 <figure>
   <img src="https://img.wemd.app/1787413344595_aqoig1.png" alt="XdriveC2 的 BOF 执行与后渗透能力">
-  <figcaption>XdriveC2：BOF 执行 / 后渗透</figcaption>
 </figure>
 
 Zdrive webshell：隐匿执行命令 / 后渗透
 
 <figure>
   <img src="https://img.wemd.app/1787414109894_ybms2f.png" alt="Zdrive webshell 隐匿执行命令与后渗透">
-  <figcaption>Zdrive webshell：隐匿执行 / 后渗透</figcaption>
 </figure>
 
 全部 CLI 化，交给 Agent 使用：
 
 <figure>
   <img src="https://img.wemd.app/1787412144609_xpz9fp.png" alt="红队能力全部 CLI 化后供 Agent 调用">
-  <figcaption>能力收成 CLI，窗口里只留下场契约和本题</figcaption>
 </figure>
 
 本届百度赛未设置内网渗透题。但笔者在实战中让 Agent 使用这一套 CLI，打穿过某 EDR 防护下的目标，从头到尾没有被踢出局。
@@ -200,7 +186,6 @@ GEPA 不训练模型，只是把 prompt 当成一个能迭代的组件：同一�
 
 <figure>
   <img src="https://img.wemd.app/1787415213266_splkxo.png" alt="GEPA 对 prompt 进行迭代优化的示意图">
-  <figcaption>GEPA：不训模型，只把 prompt 当成可迭代组件</figcaption>
 </figure>
 
 ## 实战
@@ -213,12 +198,10 @@ GEPA 不训练模型，只是把 prompt 当成一个能迭代的组件：同一�
 
 <figure>
   <img src="https://img.wemd.app/1787416121862_gtcn94.png" alt="输入企业名称后的自动化信息收集与资产评分">
-  <figcaption>输入企业名称 → 信息收集 / 资产评分</figcaption>
 </figure>
 
 <figure>
   <img src="https://img.wemd.app/1787416286133_tl4t4b.png" alt="自动化黑盒渗透流程">
-  <figcaption>再到黑盒渗透</figcaption>
 </figure>
 
 现在很少有人古法挖洞了。你的 Agent 需要有一些独特的灵魂，找到其他 Agent 可能遗漏的地方捡漏。
@@ -227,12 +210,10 @@ GEPA 不训练模型，只是把 prompt 当成一个能迭代的组件：同一�
 
 <figure>
   <img src="https://img.wemd.app/1787416650382_jv0py6.png" alt="7 月漏洞挖掘成果截图（一）">
-  <figcaption>7 月部分成果</figcaption>
 </figure>
 
 <figure>
   <img src="https://img.wemd.app/1787416664162_w6bm6c.png" alt="7 月漏洞挖掘成果截图（二）">
-  <figcaption>7 月部分成果（续）</figcaption>
 </figure>
 
 这套系统还在进一步优化中。我相信有一天，输入一个企业名称到内网沦陷，是真正可以做到的事情。
