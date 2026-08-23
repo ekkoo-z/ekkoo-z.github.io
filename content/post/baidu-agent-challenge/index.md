@@ -86,7 +86,7 @@ Heimdall 的 pi agent 实现反过来做：
 
 裸 Pi 跑完整 TSecBench v1 Web 题，有一部分没解出来。
 
-<figure>
+<figure class="small">
   <img src="https://img.wemd.app/1787407682471_6cuawn.png" alt="裸 Pi 在 TSecBench v1 Web 题上的未解情况">
 </figure>
 
