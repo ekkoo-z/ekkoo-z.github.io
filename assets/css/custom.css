@@ -238,13 +238,17 @@ h1, h2, h3, h4, h5, h6,
 .post__content figure.small {
   max-width: 50%;
 }
-.post__content figure img {
+.post__content figure img,
+.post__content figure video {
   display: block;
   margin: 0 auto;
   width: 100%;
   height: auto;
   border-radius: 6px;
   border: 1px solid rgba(128, 128, 128, 0.15);
+}
+.post__content figure video {
+  background: #000;
 }
 
 .post__meta {
